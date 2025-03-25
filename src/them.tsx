@@ -50,7 +50,7 @@ const AppTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: '"Noto Sans Lao Variable", sans-serif',
+    fontFamily: 'Noto Sans Lao Variable, sans-serif',
   },
   shape: {
     borderRadius: 8
