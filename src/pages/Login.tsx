@@ -18,6 +18,7 @@ const Login =() =>  {
         }
         navigate("/")
       } catch (error) {
+        console.error(error)
         navigate("/login");
       }
     }
@@ -50,6 +51,7 @@ const Login =() =>  {
       setError(false)
       navigate("/")
     } catch (error) {
+      console.error(error)
       setError(true)
       setPassword("")
       setUsername("")

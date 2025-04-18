@@ -1,4 +1,4 @@
-import { AccordionDetails, accordionDetailsClasses, AccordionSummary, Alert, Button, Container, Fade, FormControl, Grid2, InputLabel, MenuItem, Paper, Select, SelectChangeEvent, Skeleton, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, TextField, Tooltip, Typography } from "@mui/material"
+import { AccordionDetails, accordionDetailsClasses, AccordionSummary, Alert, Button, Fade, FormControl, Grid2, InputLabel, MenuItem, Paper, Select, SelectChangeEvent, Skeleton, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, TextField, Tooltip, Typography } from "@mui/material"
 import { useState } from "react"
 import Accordion, {
   AccordionSlots,
@@ -214,6 +214,7 @@ const Home = () =>{
         setExportLoading(false)
         return
       } catch (error) {
+        console.error(error)
         setExportError(true)
         setExportLoading(false)
         return
@@ -238,7 +239,7 @@ const Home = () =>{
   return (
     <>
       <Navbar />
-      <Container maxWidth="xl" sx={{mt: 2}}>
+      <Paper sx={{p: 2, width: "100%"}}>
         <div>
         <Typography variant="h5" sx={{mt: 3, mb: 1}}>List of requests for E-statement</Typography>
         <Accordion
@@ -703,7 +704,7 @@ const Home = () =>{
           }}
         />
         </div>
-      </Container>
+      </Paper>
     </>
   )
 } 
